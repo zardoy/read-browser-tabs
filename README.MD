@@ -13,9 +13,12 @@ import { getActiveTabInfo } from "read-browser-tabs";
 await getActiveTabInfo();
 //=>
 // {
-//   url: 'https://github.com/zbrateam/Zebra',
-//   title: 'GitHub - zbrateam/Zebra: A Useful Package Manager for iOS',
-//   browserTitle: 'safari'
+//   erroredBrowsers: [],
+//   tabInfo: {
+//     url: 'https://github.com/zbrateam/Zebra',
+//     title: 'GitHub - zbrateam/Zebra: A Useful Package Manager for iOS',
+//     browserTitle: 'safari'
+//   }
 // }
 
 await getActiveTabInfo({
@@ -24,9 +27,12 @@ await getActiveTabInfo({
 });
 //=>
 // {
-//   url: 'https://github.com/jsdoc/jsdoc',
-//   title: 'jsdoc/jsdoc: An API documentation generator for JavaScript.',
-//   browserTitle: 'google chrome'
+//   erroredBrowsers: [],
+//   tabInfo: {
+//     url: 'https://github.com/jsdoc/jsdoc',
+//     title: 'jsdoc/jsdoc: An API documentation generator for JavaScript.',
+//     browserTitle: 'google chrome'
+//   }
 // }
 
 // for example only safari is running
@@ -34,15 +40,23 @@ await getActiveTabInfo({
     // but here we are trying to get info from google chrome ONLY
     browsers: ["google chrome"]
 });
-//=> null
+// {
+//   erroredBrowsers: [],
+//   tabInfo: null
+// }
 
 ```
+
+## Things to Note
+
+- It usually takes 50 - 300ms to get info. It's a good practice to add timeout for 500ms.
+<!-- - When you first run this script from app user will see the message: ![jxa prompt](docs-assets/jxa-prompt.png) If user click *Don't Allow*, you will get an Error: `Error: Error: An error occurred. (-1743)`. For further runs it won't ask for user again and to avoid this error user must go to preferences and explicitly enable all browsers: ![settings-allow-jxa](docs-assets/settings-allow-jxa.png) Keep in mind that if you are using Electron, you can easily show this window to user. -->
 
 ## Why?
 
 You can call it a fork of [get-chrome-tabs](https://www.npmjs.com/package/get-chrome-tabs), but get-chrome-tabs has a **huge** performance issue, when multiple windows are opened. That's because it travels over all windows and tabs. And of course it takes A LOT of time. This module solves the problem by accessing only the active (focused) tab. And it supports Safari!
 
-### It could be better
+### It Could be Better
 
 This module VERY unreliable, like it can break in any day. Apple created JXA and it's very bad. Sometimes I get `execution error: Error: Error: AppleEvent handler failed.` because of `.properties()`. And it seems there is no official documentation for JXA, so I don't want waste my time any more. That's why this module doesn't have wide browsers support (but it could), I just don't know how to introspect properties on Application instance. Also see [this answer](https://stackoverflow.com/a/41923909/14982288).
 
