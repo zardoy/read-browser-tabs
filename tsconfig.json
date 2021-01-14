@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "strict": true,
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "isolatedModules": true,
+        "noEmitOnError": true,
+        "declaration": true,
+        "outDir": "build"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "src/jxa"
+    ]
+}

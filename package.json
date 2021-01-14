@@ -1,0 +1,45 @@
+{
+    "name": "read-browser-tabs",
+    "version": "0.0.0-development",
+    "description": "(macOS only) Get tabs from running chromium browser",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "repository": "https://github.com/zardoy/read-browser-tabs.git",
+    "author": "Vitaly Turovsky <vital2580@icloud.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "ts-node src/index.ts",
+        "prepublishOnly": "tsc"
+    },
+    "engines": {
+        "node": ">=10"
+    },
+    "files": [
+        "build"
+    ],
+    "dependencies": {
+        "@jxa/run": "^1.3.4"
+    },
+    "devDependencies": {
+        "@jxa/global-type": "^1.3.4",
+        "@types/node": "^14.14.20",
+        "@typescript-eslint/eslint-plugin": "^4.13.0",
+        "eslint": "^7.17.0",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.1.3"
+    },
+    "keywords": [
+        "node",
+        "typescript",
+        "jxa",
+        "integration",
+        "browser tabs",
+        "read tabs",
+        "get tabs",
+        "retrieve tabs",
+        "browser",
+        "safari",
+        "chrome",
+        "chromium"
+    ]
+}

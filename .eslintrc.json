@@ -1,0 +1,77 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // why do I need this options if I have .editorconfig
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        // should be standart
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-trailing-spaces": "error",
+        "no-alert": "warn",
+        "no-var": "error",
+        "prefer-arrow-callback": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "rest-spread-spacing": "error",
+        "prefer-template": "error",
+        // my opinion
+        "require-await": "error",
+        // todo push this lines to root README
+        "@typescript-eslint/ban-ts-comment": "off",
+        // I keep emty interfaces sometimes for easier refactoring. todo find better refactoring tools and switch to warn
+        "@typescript-eslint/no-empty-interface": "off",
+        "no-script-url": "error",
+        "no-multi-spaces": "error",
+        // forbid usage of single quotes
+        "quotes": [
+            "error",
+            "double",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-extra-parens": "error",
+        "quote-props": [
+            "error",
+            "consistent-as-needed"
+        ],
+        "no-console": "warn",
+        // es6
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "arrow-spacing": "error",
+        "no-confusing-arrow": "error",
+        "prefer-const": "off",
+        "prefer-destructuring": "error",
+        "prefer-numeric-literals": "error"
+    }
+}
