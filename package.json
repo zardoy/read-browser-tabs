@@ -32,14 +32,14 @@
         "node",
         "typescript",
         "jxa",
+        "browser",
         "integration",
         "browser tabs",
         "read tabs",
         "get tabs",
         "retrieve tabs",
-        "browser",
         "safari",
         "chrome",
-        "chromium"
+        "tab info"
     ]
 }
