@@ -50,7 +50,7 @@ await getActiveTabInfo({
 ## Things to Note
 
 - It usually takes 50 - 300ms to get info. It's a good practice to add timeout for 500ms.
-<!-- - When you first run this script from app user will see the message: ![jxa prompt](docs-assets/jxa-prompt.png) If user click *Don't Allow*, you will get an Error: `Error: Error: An error occurred. (-1743)`. For further runs it won't ask for user again and to avoid this error user must go to preferences and explicitly enable all browsers: ![settings-allow-jxa](docs-assets/settings-allow-jxa.png) Keep in mind that if you are using Electron, you can easily show this window to user. -->
+- When you first run this script from app user will see the message: ![jxa prompt](docs-assets/jxa-prompt.png) <!-- If user click *Don't Allow*, you will get an Error: `Error: Error: An error occurred. (-1743)`. For further runs it won't ask for user again and to avoid this error user must go to preferences and explicitly enable all browsers: ![settings-allow-jxa](docs-assets/settings-allow-jxa.png) Keep in mind that if you are using Electron, you can easily show this window to user. -->
 
 ## Why?
 
