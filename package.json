@@ -1,7 +1,7 @@
 {
     "name": "read-browser-tabs",
     "version": "0.0.0-development",
-    "description": "(macOS only) Get tabs from running chromium browser",
+    "description": "(macOS only) Get active tab info from running safari or chrome",
     "main": "build/index.js",
     "types": "build/index.d.ts",
     "repository": "https://github.com/zardoy/read-browser-tabs.git",

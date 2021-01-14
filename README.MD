@@ -54,7 +54,7 @@ await getActiveTabInfo({
 
 ## Why?
 
-You can call it a fork of [get-chrome-tabs](https://www.npmjs.com/package/get-chrome-tabs), but get-chrome-tabs has a **huge** performance issue, when multiple windows are opened. That's because it travels over all windows and tabs. And of course it takes A LOT of time. This module solves the problem by accessing only the active (focused) tab. And it supports Safari!
+I used [get-chrome-tabs](https://www.npmjs.com/package/get-chrome-tabs) in past, but it has a **huge** performance issue, with handling multiple opened windows. That's because it travels over all windows and tabs and of course it takes A LOT of time. This module solves the problem by accessing only the active (focused) tab. And it supports Safari!
 
 ### It Could be Better
 
