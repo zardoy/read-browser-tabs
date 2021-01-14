@@ -59,10 +59,8 @@ const browserTabs = (browserTitles: typeof supportedBrowsers): ActiveTabReturnTy
     };
 };
 
-const getActiveTabInfo = async ({ browsers = supportedBrowsers }: Partial<Options> = {}): Promise<ActiveTabReturnType> => {
+export const getActiveTabInfo = async ({ browsers = supportedBrowsers }: Partial<Options> = {}): Promise<ActiveTabReturnType> => {
     if (process.platform !== "darwin") throw new Error("Only macOS is supported");
     // no access code: -1743
     return await runJxa(browserTabs, browsers);
 };
-
-export default getActiveTabInfo;
