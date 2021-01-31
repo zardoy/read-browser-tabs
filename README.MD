@@ -1,6 +1,6 @@
 # Get Browser Tabs &middot; [![npm version](https://img.shields.io/npm/v/read-browser-tabs?color=limegreen)](https://npmjs.com/package/read-browser-tabs) [![GitHub top language](https://img.shields.io/github/languages/top/zardoy/read-browser-tabs)](https://github.com/zardoy/read-browser-tabs/tree/master/src) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-> Supported platforms: macOS only. Supported browsers: safari, google chrome.
+> Supported platforms: macOS only. Supported browsers: Safari, Google Chrome.
 
 Easily retrieve information about active tab from Node.js.
 
