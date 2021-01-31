@@ -1,5 +1,6 @@
 import { run as runJxa } from "@jxa/run";
-import type { } from "@jxa/global-type";
+// see https://basarat.gitbook.io/typescript/project/modules/external-modules#import-require-for-importing-type-only for details
+import { } from "@jxa/global-type";
 
 // TODO probombitsa
 const makeArr = <T extends string>(arr: T[]) => arr;
